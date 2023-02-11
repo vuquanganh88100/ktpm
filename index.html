@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,10 +56,67 @@
             <a class="nav-link" href="#">Upload</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
+            <a class="nav-link"id="register-button" href="#">Register</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" id="login-button" href="#">Login</a>
           </li>
         </ul>
-      </
+      </div>
+    </nav>
+    <div class="container1">
+      <form id="registration-form" style="display: none;">
+        <h1>Create Your Spotify Account</h1>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirmPassword" required>
+        </div>
+        <div class="form-group">
+          <label for="sex">Sex</label>
+          <select id="sex" name="sex">
+            <option value="">Please select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob">
+        </div>
+        <input type="submit" value="Sign Up">
+      </form>
+      <p id="error-message"></p>
+      <form id="login-form" style="display: none;">
+        <form action="">
+          <div class="form-group">
+            <label for="username">Username or Email</label>
+            <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+          <p>Don't have an account?
+          </p>
+          <button id="sign-up-button">Sign up for 100pro</button>
+        </form>
+      </form>
+    </div>
+    <script src="/login.js"></script>
+  </body>
+</html>
+    
