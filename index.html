@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html lang="en">
+  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,114 +11,165 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
     <link rel="stylesheet"  href="index.css" />
+    <link rel="stylesheet" href=""/>
     <title>Music Player Web</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">
-        <img src="/image/unnamed.webp" width="30" height="30" alt="Logo" />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Library</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Create Playlist</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
-            Search
+    <div class="app">
+      <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">
+            <img src="/image/unnamed.webp" width="30" height="30" alt="Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
           </button>
-        </form>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Upload</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"id="register-button" href="#">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="login-button" href="#">Login</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container1">
-      <form id="registration-form" style="display: none;">
-        <h1>Create Your Spotify Account</h1>
-        <div class="form-group">
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required>
-        </div>
-        <div class="form-group">
-          <label for="confirm-password">Confirm Password:</label>
-          <input type="password" id="confirm-password" name="confirmPassword" required>
-        </div>
-        <div class="form-group">
-          <label for="sex">Sex</label>
-          <select id="sex" name="sex">
-            <option value="">Please select</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="dob">Date of Birth</label>
-          <input type="date" id="dob" name="dob">
-        </div>
-        <input type="submit" value="Sign Up">
-      </form>
-      <p id="error-message"></p>
-      <form id="login-form" style="display: none;">
-        <form action="">
-          <div class="form-group">
-            <label for="username">Username or Email</label>
-            <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="home-button" >Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Library</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Create Playlist</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+                Search
+              </button>
+            </form>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Upload</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"id="register-button" href="#">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="login-button" href="#">Login</a>
+              </li>
+            </ul>
           </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password">
-          </div>
-          <button type="submit" class="btn btn-primary">Login</button>
-          <p>Don't have an account?
-          </p>
-          <button id="sign-up-button">Sign up for 100pro</button>
-        </form>
-      </form>
+        </nav>
+        <div class="container1">
+          <form id="registration-form" style="display: none;">
+            <h1>Create Your Spotify Account</h1>
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password:</label>
+              <input type="password" id="confirm-password" name="confirmPassword" required>
+            </div>
+            <div class="form-group">
+              <label for="sex">Sex</label>
+              <select id="sex" name="sex">
+                <option value="">Please select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="dob">
+            </div>
+            <input type="submit" value="Sign Up">
+          </form>
+          <p id="error-message"></p>
+          <form id="login-form" style="display: none;">
+            <form action="">
+              <div class="form-group">
+                <label for="username">Username or Email</label>
+                <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password">
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+              <p>Don't have an account?
+              </p>
+              <button id="sign-up-button">Sign up for 100pro</button>
+            </form>
+          </form>
+        </div>
+      </header>
     </div>
-    <script src="/login.js"></script>
+    <div class="container" id="container">
+      <div class="category" id="solo-albums">
+        <img src="/image/ab67616d0000b273cc639ca1d584dc13c111c560.jpg" width="300px" height="200px" alt="Albums Solo">
+        <h2>Albums Solo</h2>
+      </div>
+      <div class="category" id="duet-albums">
+        <img src="/image/ab67616d0000b273da4c74e60bdc3acf459c06af.jpg"width="300px" height="200px" alt="Albums Duet">
+        <h2>Albums Duet</h2>
+      </div>
+    </div>
+    <footer>
+      <div class="footer" style="padding: 15px 0; margin-top: 15px;"  align="center">
+          <a href="https://www.facebook.com/profile.php?id=100010921935959">
+              <i class="fa-brands fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+          </a>
+          <a href="#">
+                  <i class="fa-brands fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+              </a>
+              <a href="#">
+                      <i class="fa-solid fa-envelope fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                  </a>
+                  <a href="#">
+                          <i class="fa-brands fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                      </a>
+                      <a href="#">
+                              <i class="fa-brands fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                          </a>
+                          <a href="#">
+                                  <i class="fa-brands fa-pinterest fa-lg white-text"></i>
+                              </a>
+      </div>
+      <div style="background: #004872;">
+          <p style="color: #488b91; padding: 15px 0;" align="center">
+              &copy; 2022 Copyright: <a href="mailto:cvachemistry001@gmail.com">Created By:HAHA</a>
+          </p>
+      </div>
+  </footer>
   </body>
 </html>
-    
+<script src="login.js"></script>    </div>
+      
+      
+      
+      
+
+
+
+
+
